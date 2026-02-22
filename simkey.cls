@@ -110,7 +110,8 @@
 	}
 
 	% page number notes
-	% \usepackage{tikz}
+	\usepackage{tikz}
+	\usetikzlibrary{shapes,arrows.meta,positioning}
 	\newcommand{\footlineextra}[1]{
 		\begin{tikzpicture}[remember picture,overlay]
 			\node[yshift=2ex,anchor=south east] at (current page.south east) {\usebeamerfont{author in head/foot}#1};
