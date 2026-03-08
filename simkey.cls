@@ -95,9 +95,18 @@
 
 % Itemize
 \usepackage{enumitem} %3 lines after this resolve bullet disappear and adjust spacing
-\setitemize{label=\usebeamerfont*{itemize item}%
+\setitemize[1]{label=\usebeamerfont*{itemize item}%
 	\usebeamercolor[fg]{itemize item}
-	\usebeamertemplate{itemize item},noitemsep,topsep=0pt,parsep=0pt,partopsep=0pt}
+	\usebeamertemplate{itemize item}}
+
+\setitemize[2]{label=\usebeamerfont*{itemize subitem}%
+	\usebeamercolor[fg]{itemize subitem}
+	\usebeamertemplate{itemize subitem}}
+
+\setitemize[3]{label=\usebeamerfont*{itemize subsubitem}%
+	\usebeamercolor[fg]{itemize subsubitem}
+	\usebeamertemplate{itemize subsubitem}}
+\setitemize{noitemsep,topsep=0pt,parsep=0pt,partopsep=0pt}
 
 % pagenumber
 \setbeamercolor{footline}{fg=blue}
@@ -110,8 +119,7 @@
 	}
 
 	% page number notes
-	\usepackage{tikz}
-	\usetikzlibrary{shapes,arrows.meta,positioning}
+	% \usepackage{tikz}
 	\newcommand{\footlineextra}[1]{
 		\begin{tikzpicture}[remember picture,overlay]
 			\node[yshift=2ex,anchor=south east] at (current page.south east) {\usebeamerfont{author in head/foot}#1};
@@ -262,8 +270,8 @@
 	}
 
 	\newcommand{\rimg}[1]{
-		\begin{textblock*}{60mm}(68mm,24mm)
-			\includegraphics[width=60mm,height=68mm]{#1}
+		\begin{textblock*}{56mm}(62mm,24mm)
+			\includegraphics[width=56mm,height=68mm]{#1}
 		\end{textblock*}
 	}
 
@@ -286,7 +294,7 @@
 	}
 
 	\newcommand{\ltxt}[3]{
-		\begin{textblock*}{62mm}(3mm,24mm)
+		\begin{textblock*}{58mm}(3mm,24mm)
 			\begin{tpblock}{#1}{#2}
 				#3
 			\end{tpblock}

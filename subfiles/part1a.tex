@@ -1,13 +1,10 @@
 %! TEX root = part1.tex
 % the main TeX file which is intended to compile, :VimtexReload after adjustment
+   % this file should be included in the main file
 % :h vimtex-tex-root
 \documentclass[../skb.tex]{subfiles}
-% \includeonlyframes{current}
-% \setbeameroption{hide notes} % Only slides
-% \setbeameroption{show only notes} % Only notes
-% \setbeameroption{show notes on second screen=right} % Both
-
-
+% ensure the class of docs
+% enumerate may not work
 
 \begin{document}
 
@@ -299,4 +296,15 @@
 \begin{frame}[t,mybg=pg_8_4,mytitle=standard,dark] \end{frame}
 
 
+
+
+
+
+
+
+
+
+\bibliographystyle{apalike}
+\bibliography{../biblio.bib} % required for citecompletion, not work in mainfile
 \end{document}
+
